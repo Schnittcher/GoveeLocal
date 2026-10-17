@@ -1,6 +1,6 @@
 # Changelog
 
-## 16.10.2026 - Version 1.0
+## 17.10.2026 - Version 2.0
 
 ### Neu
 - Die Instanz prüft jetzt die eingetragene IP-Adresse und zeigt bei einer ungültigen Adresse einen Fehlerstatus.
