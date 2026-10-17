@@ -1,5 +1,5 @@
 # GoveeDiscovery
-Diese Instanz sucht Govee-Geräte im lokalen Netzwerk per UDP-Multicast und legt sie als GoveeDevice-Instanz an. Beim Öffnen der Konfiguration wird die Suche gestartet.
+Diese Instanz sucht Govee-Geräte im lokalen Netzwerk per UDP-Multicast und legt sie als GoveeDevice-Instanz an. Beim Öffnen der Konfiguration wird die Suche gestartet. Gefunden werden nur Geräte, die in der Govee Home App eingerichtet, mit dem WLAN verbunden und bei denen in den Geräteeinstellungen die LAN-Steuerung aktiviert ist. Nicht jedes Govee-Modell unterstützt die LAN-Steuerung.
 
 ## Inhaltsverzeichnis
 - [GoveeDiscovery](#goveediscovery)

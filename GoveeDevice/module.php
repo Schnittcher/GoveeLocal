@@ -146,7 +146,7 @@ class GoveeDevice extends IPSModuleStrict
 
     private function setBrightness(int $brightness): void
     {
-        $this->sendCommand('brightness', ['value' => $brightness]);
+        $this->sendCommand('brightness', ['value' => max(1, min(100, $brightness))]);
     }
 
     private function setColor(int $color): void
@@ -170,7 +170,7 @@ class GoveeDevice extends IPSModuleStrict
                 'g' => 0,
                 'b' => 0,
             ],
-            'colorTemInKelvin' => $ct
+            'colorTemInKelvin' => max(2000, min(9000, $ct))
         ]);
     }
 
@@ -208,7 +208,7 @@ class GoveeDevice extends IPSModuleStrict
             case 'State':
                 return ['PRESENTATION' => VARIABLE_PRESENTATION_SWITCH, 'USAGE_TYPE' => 0];
             case 'Brightness':
-                return ['PRESENTATION' => VARIABLE_PRESENTATION_SLIDER, 'MIN' => 0, 'MAX' => 100, 'STEP_SIZE' => 1, 'SUFFIX' => ' %', 'USAGE_TYPE' => 2];
+                return ['PRESENTATION' => VARIABLE_PRESENTATION_SLIDER, 'MIN' => 1, 'MAX' => 100, 'STEP_SIZE' => 1, 'SUFFIX' => ' %', 'USAGE_TYPE' => 2];
             case 'Color':
                 return ['PRESENTATION' => VARIABLE_PRESENTATION_COLOR];
             case 'ColorTemperature':

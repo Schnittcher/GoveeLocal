@@ -1,5 +1,5 @@
 # GoveeDevice
-Diese Instanz bildet ein Govee-Gerät in IP-Symcon ab. Sie schaltet das Gerät lokal über UDP und gleicht den Status regelmäßig ab. Angelegt wird sie normalerweise über die Instanz GoveeDiscovery.
+Diese Instanz bildet ein Govee-Gerät in IP-Symcon ab. Sie schaltet das Gerät lokal über UDP und gleicht den Status regelmäßig ab. Angelegt wird sie normalerweise über die Instanz GoveeDiscovery. Voraussetzung ist, dass das Gerät in der Govee Home App eingerichtet, mit dem WLAN verbunden und in den Geräteeinstellungen die LAN-Steuerung aktiviert ist.
 
 ## Inhaltsverzeichnis
 - [GoveeDevice](#goveedevice)
@@ -23,7 +23,7 @@ Aktualisierungsintervall | Intervall in Sekunden, in dem der Status des Geräts 
 Variable | Ident | Typ | Beschreibung
 ------------ | ------------ | ------------ | ----------------
 Status | `State` | Ja/Nein | Gerät ein- oder ausschalten, steuerbar.
-Helligkeit | `Brightness` | Ganzzahl (%) | Helligkeit 0–100, steuerbar.
+Helligkeit | `Brightness` | Ganzzahl (%) | Helligkeit 1–100, steuerbar.
 Farbe | `Color` | Ganzzahl (Hex-Farbe) | Farbe des Geräts, steuerbar.
 Farbtemperatur | `ColorTemperature` | Ganzzahl (K) | Farbtemperatur von 2000 bis 9000 K, steuerbar.
 

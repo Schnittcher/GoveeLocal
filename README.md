@@ -21,7 +21,7 @@ Mit diesem Modul lassen sich Govee-Geräte lokal über UDP in IP-Symcon integrie
 ## 1. Voraussetzungen
 
 * mindestens IPS Version 9.0
-* Govee-Geräte mit aktivierter LAN-Steuerung
+* Govee-Geräte, die die LAN-Steuerung unterstützen. Das Gerät muss in der Govee Home App eingerichtet und mit dem WLAN verbunden sein, in den Geräteeinstellungen muss die LAN-Steuerung eingeschaltet werden.
 * Werden VLANs genutzt, muss für die Suche Multicast aktiv sein.
 
 ## 2. Funktionsumfang
