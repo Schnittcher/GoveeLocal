@@ -8,7 +8,10 @@
             "State": "Status",
             "Brightness": "Helligkeit",
             "Color": "Farbe",
-            "Color Temperature": "Farbtemperatur"
+            "Color Temperature": "Farbtemperatur",
+            "Instance is active": "Instanz ist aktiv",
+            "Instance is inactive": "Instanz ist inaktiv",
+            "Invalid IP address": "Ungültige IP-Adresse"
         }
     }
 }

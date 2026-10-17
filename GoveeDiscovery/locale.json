@@ -1,8 +1,12 @@
 {
     "translations": {
         "de": {
-            "Translation 1": "Übersetzung 1",
-            "Translation 2": "Übersetzung 2"
+            "Govee Devices Discovery": "Govee Geräte suchen",
+            "IP Address": "IP-Adresse",
+            "Bluetooth Hardware Version": "Bluetooth Hardware-Version",
+            "Bluetooth Software Version": "Bluetooth Software-Version",
+            "Wifi Hardware Version": "WLAN Hardware-Version",
+            "Wifi Software Version": "WLAN Software-Version"
         }
     }
 }

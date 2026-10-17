@@ -3,7 +3,7 @@
         {
             "type": "Configurator",
             "name": "Configurator",
-            "caption": "Govee Devices Disocvery",
+            "caption": "Govee Devices Discovery",
             "delete": false,
             "sort": {
                 "column": "IP",
@@ -28,11 +28,6 @@
                 {
                     "caption": "Bluetooth Hardware Version",
                     "name": "bleVersionHard",
-                    "width": "200px"
-                },
-                {
-                    "caption": "Bluetooth Software Version",
-                    "name": "bleVersionSoft",
                     "width": "200px"
                 },
                 {
