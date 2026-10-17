@@ -1,6 +1,6 @@
 {
     "id": "{BFF4858B-78B1-B4AD-B755-24AEC44EACFF}",
-    "name": "GoveeDevice",
+    "name": "GoveeLocalDevice",
     "type": 3,
     "vendor": "Govee",
     "aliases": [],

@@ -1,8 +1,8 @@
-# GoveeDevice
-Diese Instanz bildet ein Govee-Gerät in IP-Symcon ab. Sie schaltet das Gerät lokal über UDP und gleicht den Status regelmäßig ab. Angelegt wird sie normalerweise über die Instanz GoveeDiscovery. Voraussetzung ist, dass das Gerät in der Govee Home App eingerichtet, mit dem WLAN verbunden und in den Geräteeinstellungen die LAN-Steuerung aktiviert ist.
+# GoveeLocalDevice
+Diese Instanz bildet ein Govee-Gerät in IP-Symcon ab. Sie schaltet das Gerät lokal über UDP und gleicht den Status regelmäßig ab. Angelegt wird sie normalerweise über die Instanz GoveeLocalDiscovery. Voraussetzung ist, dass das Gerät in der Govee Home App eingerichtet, mit dem WLAN verbunden und in den Geräteeinstellungen die LAN-Steuerung aktiviert ist.
 
 ## Inhaltsverzeichnis
-- [GoveeDevice](#goveedevice)
+- [GoveeLocalDevice](#goveelocaldevice)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [1. Konfiguration](#1-konfiguration)
   - [2. Variablen](#2-variablen)

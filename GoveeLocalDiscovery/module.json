@@ -1,6 +1,6 @@
 {
     "id": "{60B0AA64-7BA1-C26D-1CEC-66B3197064BD}",
-    "name": "GoveeDiscovery",
+    "name": "GoveeLocalDiscovery",
     "type": 5,
     "vendor": "Govee",
     "aliases": [],

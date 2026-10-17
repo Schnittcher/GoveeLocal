@@ -1,14 +1,14 @@
 [![Version](https://img.shields.io/badge/Symcon-PHPModul-red.svg)](https://www.symcon.de/service/dokumentation/entwicklerbereich/sdk-tools/sdk-php/)
 ![Version](https://img.shields.io/badge/Symcon%20Version-9.0%20%3E-blue.svg)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-green.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Check Style](https://github.com/Schnittcher/Govee/actions/workflows/style.yml/badge.svg)](https://github.com/Schnittcher/Govee/actions/workflows/style.yml)
-[![Tests](https://github.com/Schnittcher/Govee/actions/workflows/tests.yml/badge.svg)](https://github.com/Schnittcher/Govee/actions/workflows/tests.yml)
+[![Check Style](https://github.com/Schnittcher/GoveeLocal/actions/workflows/style.yml/badge.svg)](https://github.com/Schnittcher/GoveeLocal/actions/workflows/style.yml)
+[![Tests](https://github.com/Schnittcher/GoveeLocal/actions/workflows/tests.yml/badge.svg)](https://github.com/Schnittcher/GoveeLocal/actions/workflows/tests.yml)
 
-# Govee
+# Govee Local
 Mit diesem Modul lassen sich Govee-Geräte lokal über UDP in IP-Symcon integrieren.
 
 ## Inhaltsverzeichnis
-- [Govee](#govee)
+- [Govee Local](#govee-local)
   - [Inhaltsverzeichnis](#inhaltsverzeichnis)
   - [1. Voraussetzungen](#1-voraussetzungen)
   - [2. Funktionsumfang](#2-funktionsumfang)
@@ -32,16 +32,16 @@ Die einzelnen Funktionen stehen bei den Instanzen unter "Enthaltene Module" und 
 
 ## 3. Enthaltene Module
 
-* [GoveeDevice](GoveeDevice/README.md)
+* [GoveeLocalDevice](GoveeLocalDevice/README.md)
   * Bildet ein Govee-Gerät ab und schaltet es lokal über UDP.
-* [GoveeDiscovery](GoveeDiscovery/README.md)
-  * Sucht Govee-Geräte im Netzwerk und legt sie als GoveeDevice an.
+* [GoveeLocalDiscovery](GoveeLocalDiscovery/README.md)
+  * Sucht Govee-Geräte im Netzwerk und legt sie als GoveeLocalDevice an.
 
 ## 4. Installation
 Die Installation erfolgt über den IP-Symcon Module Store.
 
 ## 5. Konfiguration in IP-Symcon
-Die Geräte werden über die Instanz GoveeDiscovery gefunden und angelegt. Die Konfiguration übernimmt dabei die Discovery-Instanz.
+Die Geräte werden über die Instanz GoveeLocalDiscovery gefunden und angelegt. Die Konfiguration übernimmt dabei die Discovery-Instanz.
 
 ## 6. Spenden
 Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:

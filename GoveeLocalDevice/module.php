@@ -3,10 +3,12 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/../libs/ColorHelperStrict.php';
+require_once __DIR__ . '/../libs/UdpPayloadHelperStrict.php';
 
-class GoveeDevice extends IPSModuleStrict
+class GoveeLocalDevice extends IPSModuleStrict
 {
     use GoveeColorHelper;
+    use GoveeUdpPayloadHelper;
 
     private const STATUS_INVALID_HOST = 202;
     private const PRESENTATION_VERSION = 1;
@@ -92,7 +94,7 @@ class GoveeDevice extends IPSModuleStrict
     {
         $this->SendDataToParent(json_encode([
             'DataID'     => '{8E4D9B23-E0F2-1E05-41D8-C21EA53B8706}',
-            'Buffer'     => $Payload,
+            'Buffer'     => $this->EncodePayload($Payload),
             'ClientIP'   => $this->ReadPropertyString('Host'),
             'ClientPort' => 4003,
             'Broadcast'  => false,
@@ -104,7 +106,7 @@ class GoveeDevice extends IPSModuleStrict
         $Payload = [
             'msg' => [
                 'cmd'  => 'devStatus',
-                'data' => []
+                'data' => new stdClass()
             ]
         ];
         $this->SendData(json_encode($Payload));
@@ -113,7 +115,7 @@ class GoveeDevice extends IPSModuleStrict
     public function ReceiveData(string $JSONString): string
     {
         $data = json_decode($JSONString, true);
-        $buffer = json_decode($data['Buffer'] ?? '', true);
+        $buffer = json_decode($this->DecodePayload($data['Buffer'] ?? ''), true);
         $deviceData = $buffer['msg']['data'] ?? null;
         if (!is_array($deviceData)) {
             $this->SendDebug(__FUNCTION__, 'Invalid data received', 0);

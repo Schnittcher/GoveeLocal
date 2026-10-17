@@ -2,8 +2,12 @@
 
 declare(strict_types=1);
 
-class GoveeDiscovery extends IPSModuleStrict
+require_once __DIR__ . '/../libs/UdpPayloadHelperStrict.php';
+
+class GoveeLocalDiscovery extends IPSModuleStrict
 {
+    use GoveeUdpPayloadHelper;
+
     public function Create(): void
     {
         //Never delete this line!
@@ -40,7 +44,7 @@ class GoveeDiscovery extends IPSModuleStrict
     {
         $this->SendDataToParent(json_encode([
             'DataID'     => '{8E4D9B23-E0F2-1E05-41D8-C21EA53B8706}',
-            'Buffer'     => $Payload,
+            'Buffer'     => $this->EncodePayload($Payload),
             'ClientIP'   => '239.255.255.250',
             'ClientPort' => 4001,
             'Broadcast'  => false,
@@ -65,7 +69,7 @@ class GoveeDiscovery extends IPSModuleStrict
     public function ReceiveData(string $JSONString): string
     {
         $data = json_decode($JSONString, true);
-        $buffer = json_decode($data['Buffer'] ?? '', true);
+        $buffer = json_decode($this->DecodePayload($data['Buffer'] ?? ''), true);
         $data = $buffer['msg']['data'] ?? null;
         if (!is_array($data) || !isset($data['device'], $data['ip'])) {
             $this->SendDebug(__FUNCTION__, 'Invalid data received', 0);
