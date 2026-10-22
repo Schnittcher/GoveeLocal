@@ -19,7 +19,6 @@ class GoveeLocalDevice extends IPSModuleStrict
         parent::Create();
 
         $this->RegisterPropertyString('Host', '');
-        $this->RequireParent('{82347F20-F541-41E1-AC5B-A636FD3AE2D8}');
         $this->RegisterPropertyBoolean('Active', false);
         $this->RegisterPropertyInteger('Interval', 10);
 
@@ -35,6 +34,25 @@ class GoveeLocalDevice extends IPSModuleStrict
         $this->EnableAction('ColorTemperature');
 
         $this->RegisterTimer('GOVEE_UpdateState', 0, 'GOVEE_UpdateState($_IPS[\'TARGET\']);');
+    }
+
+    public function GetCompatibleParents(): string
+    {
+        return json_encode([
+            'type'      => 'connect',
+            'moduleIDs' => ['{82347F20-F541-41E1-AC5B-A636FD3AE2D8}']
+        ]);
+    }
+
+    public function GetConfigurationForParent(): string
+    {
+        return json_encode([
+            'BindIP'             => '0.0.0.0',
+            'BindPort'           => 4002,
+            'EnableBroadcast'    => true,
+            'EnableReuseAddress' => true,
+            'Open'               => true,
+        ], JSON_UNESCAPED_SLASHES);
     }
 
     public function Destroy(): void

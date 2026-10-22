@@ -43,6 +43,8 @@ Die Installation erfolgt über den IP-Symcon Module Store.
 ## 5. Konfiguration in IP-Symcon
 Die Geräte werden über die Instanz GoveeLocalDiscovery gefunden und angelegt. Die Konfiguration übernimmt dabei die Discovery-Instanz.
 
+Die Govee-Geräte antworten immer an Port 4002. Discovery und alle Geräteinstanzen teilen sich deshalb einen gemeinsamen UDP-Socket mit diesem Empfangsport. Er wird beim Anlegen automatisch erstellt oder wiederverwendet.
+
 ## 6. Spenden
 Dieses Modul ist für die nicht kommerzielle Nutzung kostenlos, Schenkungen als Unterstützung für den Autor werden hier akzeptiert:
 

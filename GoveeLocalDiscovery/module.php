@@ -13,7 +13,6 @@ class GoveeLocalDiscovery extends IPSModuleStrict
         //Never delete this line!
         parent::Create();
 
-        $this->RequireParent('{82347F20-F541-41E1-AC5B-A636FD3AE2D8}');
         $this->RegisterAttributeString('Devices', '{}');
     }
 
@@ -29,9 +28,19 @@ class GoveeLocalDiscovery extends IPSModuleStrict
         parent::ApplyChanges();
     }
 
+    public function GetCompatibleParents(): string
+    {
+        return json_encode([
+            'type'      => 'connect',
+            'moduleIDs' => ['{82347F20-F541-41E1-AC5B-A636FD3AE2D8}']
+        ]);
+    }
+
     public function GetConfigurationForParent(): string
     {
         $settings = [
+            'BindIP'             => '0.0.0.0',
+            'Open'               => true,
             'BindPort'           => 4002,
             'EnableBroadcast'    => true,
             'EnableReuseAddress' => true,
@@ -119,6 +128,7 @@ class GoveeLocalDiscovery extends IPSModuleStrict
                     [
                         'moduleID'      => '{82347F20-F541-41E1-AC5B-A636FD3AE2D8}', //UDP Socket
                         'configuration' => [
+                            'BindIP'             => '0.0.0.0',
                             'BindPort'           => 4002,
                             'Open'               => true,
                             'EnableReuseAddress' => true,
