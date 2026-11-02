@@ -5,6 +5,7 @@
 ### Fixes
 - Die Instanzen lassen sich in IP-Symcon 9 wieder anlegen (Fehler "RequireParent is not available anymore").
 - Die Geräte-Suche und alle Geräteinstanzen nutzen jetzt gemeinsam einen UDP-Socket, damit sich die Antworten der Geräte auf Port 4002 nicht stören.
+- Der Dokumentationslink der Instanzen führt jetzt zur Dokumentation auf deinsmarthome.info.
 
 ## 17.10.2026 - Version 2.0
 
